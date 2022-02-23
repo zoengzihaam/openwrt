@@ -41,12 +41,12 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
-#     - name: Telgram notification
-#       uses: appleboy/telegram-action@master
-#       with:
-#         to: ${{ secrets.TELEGRAM_TO }}
-#         token: ${{ secrets.TELEGRAM_TOKEN }}
-#         args: OpenWrt Compile Start.
+    - name: Telgram notification
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        args: OpenWrt Compile Start.
     - name: Checkout
       uses: actions/checkout@master
 
